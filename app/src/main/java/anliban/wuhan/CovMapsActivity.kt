@@ -36,7 +36,7 @@ class CovMapsActivity : AppCompatActivity(), OnMapReadyCallback {
             binding.recover.text = totalRecover.toString()
             binding.death.text = totalDeath.toString()
             items.forEach {
-                map.addMarker(MarkerOptions().position(LatLng(it.lng, it.lng)))
+                map.addMarker(MarkerOptions().position(LatLng(it.lat, it.lng)))
             }
         })
         viewModel.message.observe(this, Observer {
