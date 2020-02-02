@@ -19,13 +19,12 @@
             tools:context=".CovMapsActivity" />
 
         <TextView
-            android:id="@+id/recover"
+            android:id="@+id/confirm"
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:alpha="0.4"
             android:background="#000000"
             android:gravity="center"
-            android:text="recover"
             android:textColor="#ffffff"
             android:textSize="15dp"
             android:textStyle="bold"
@@ -40,13 +39,13 @@
             android:alpha="0.4"
             android:background="#000000"
             android:gravity="center"
-            android:text="death"
             android:textColor="#ffffff"
             android:textSize="15dp"
             android:textStyle="bold"
             map:layout_constraintEnd_toEndOf="parent"
-            map:layout_constraintStart_toEndOf="@id/recover"
+            map:layout_constraintStart_toEndOf="@id/confirm"
             map:layout_constraintTop_toTopOf="parent" />
+
         <LinearLayout
             android:id="@+id/ad_area"
             android:layout_width="wrap_content"
@@ -55,5 +54,6 @@
             map:layout_constraintEnd_toEndOf="parent"
             map:layout_constraintStart_toStartOf="parent"
             android:orientation="vertical"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
