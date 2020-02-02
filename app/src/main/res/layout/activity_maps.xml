@@ -47,5 +47,13 @@
             map:layout_constraintEnd_toEndOf="parent"
             map:layout_constraintStart_toEndOf="@id/recover"
             map:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/ad_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

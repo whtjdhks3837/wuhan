@@ -57,6 +57,21 @@ class CovMapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun initMaps() {
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    private fun initAdmob() {
+        MobileAds.initialize(this, getString(R.string.admob))
+        AdView(this).apply {
+            adSize = AdSize.BANNER
+            adUnitId = if (BuildConfig.DEBUG) {
+                getString(R.string.banner_ad_unit_id_for_test)
+            } else {
+                getString(R.string.banner_ad_unit_id)
+            }
+            loadAd(createAdRequset())
+        }.run {
+            binding.adArea.addView(this)
+        }
+
+    }
     }
 
     /**
