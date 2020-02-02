@@ -26,7 +26,10 @@ class CoVRepository(
 
     override suspend fun fetchCityCoVs(): Result<List<CityCoV>, ErrorStatus> {
         return when (val result = remoteDataSource.getCityCoVs()) {
-            is Result.Success -> result
+            is Result.Success -> {
+                saveCityCoVs(result.data)
+                result
+            }
             is Result.Error -> getCityCoVsFromLocal()?.let { Result.success(it) } ?: result
         }
     }
